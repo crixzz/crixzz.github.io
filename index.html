@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="./src/app.css">
+
+</head>
+<body>
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+        </div>
+        <div class="col-md-4">
+             
+            <button style="background: #609f3d;
+margin-bottom: 10px;" type="button" class="btn btn-success btn-block btn-sm">
+                Unlock Wallet
+            </button>
+            <h6>
+                Your Balance:<span id="bal_in"></span>
+            </h6>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <h6 class="card-header">
+                    DIE
+                </h6>
+                <div class="card-body">
+                    <div class="logo1"></div>
+                </div>
+                <div class="card-footer">
+                    <span id="apy_in" >APY:</span>
+                    <br>
+                    Your Staked Value : <span id="stake_in"></span>
+                </div>
+            </div> 
+            <br>
+            <button type="button" class="btn btn-success">
+                Play
+            </button>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <h6 class="card-header">
+                    Retry
+                </h6>
+                <div class="card-body">
+                    <div class="logo2"></div>
+                </div>
+                <div class="card-footer">
+                    Earned:<span id="earn_in"></span><br>
+                    <br>
+                </div>
+            </div> 
+            <br>
+            <button type="button" class="btn btn-success">
+                Restart
+            </button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="./src/app.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+</body>
+</html>
