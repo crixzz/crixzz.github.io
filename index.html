@@ -7,66 +7,34 @@
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./src/app.css">
 
 </head>
-<body>
+<body onload="fn()">
     <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-8">
+   <div class="row">
+        <div class="col-md-9">
+            <div class="col-md-4">
+            <div style="background-image: url('./src/logom1.png');height: 70px;background-size: contain;width: 70px;margin-bottom: 10px;-webkit-filter: invert(90%);filter: invert(90%);"></div></div><div class="col-md-8">GLITCHR</div>
         </div>
-        <div class="col-md-4">
-             
-            <button style="background: #609f3d;
-margin-bottom: 10px;" type="button" class="btn btn-success btn-block btn-sm">
-                Unlock Wallet
-            </button>
-            <h6>
-                Your Balance:<span id="bal_in"></span>
-            </h6>
-        </div>
+   <div class="col-md-3"><a href="./farm.html" style="width:90%;margin-top: 20px;" type="button" class="btn btn-success btn-block btn-sm">
+                Play Game
+            </a></div>
     </div>
-    <br>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card">
-                <h6 class="card-header">
-                    DIE
-                </h6>
-                <div class="card-body">
-                    <div class="logo1"></div>
-                </div>
-                <div class="card-footer">
-                    <span id="apy_in" >APY:</span>
-                    <br>
-                    Your Staked Value : <span id="stake_in"></span>
-                </div>
-            </div> 
-            <br>
-            <button type="button" class="btn btn-success">
-                Play
-            </button>
-        </div>
-        <div class="col-md-6">
-            <div class="card">
-                <h6 class="card-header">
-                    Retry
-                </h6>
-                <div class="card-body">
-                    <div class="logo2"></div>
-                </div>
-                <div class="card-footer">
-                    Earned:<span id="earn_in"></span><br>
-                    <br>
-                </div>
-            </div> 
-            <br>
-            <button type="button" class="btn btn-success">
-                Restart
-            </button>
-        </div>
-    </div>
+<div class="row">
+    <div class="col-md-12"><p class="type"><br></p></div>
 </div>
+<footer class="foot">
+    <div style="margin: 0 auto;">
+    <i class="fa fa-telegram fa-lg" aria-hidden="true"></i>
+    <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+    <i class="fa fa-medium fa-lg" aria-hidden="true"></i>
+    <i class="fa fa-file-pdf-o fa-lg" aria-hidden="true"></i>
+
+</div>
+</footer>
 <script type="text/javascript" src="./src/app.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
