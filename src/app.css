@@ -23,16 +23,16 @@ font-family:Roboto, sans-serif !important;
     transition: all 0.5s ease;
 }
 .logo1 {
-   background-image: url('./coin2.png');
-height: 350px;
-background-color: #151515;
-background-position-x: 50%;
+    background-image: url('./coin2.png');
+    height: 350px;
+    background-position-x: 50%;
+    background-color: #151515;
 }
 .logo2 {
     background-image: url('./coin1.png');
-height: 350px;
-background-color: #151515;
-background-position-x: 50%;
+    height: 350px;
+    background-position-x: 50%;
+    background-color: #151515;
 }
 
 .card-body{
