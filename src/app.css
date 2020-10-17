@@ -5,6 +5,7 @@ color: #fff;
 font-family:Roboto, sans-serif !important;
 }
 .card {
+    border:0;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -17,44 +18,61 @@ font-family:Roboto, sans-serif !important;
     word-wrap: break-word;
     background-color: rgb(43, 58, 74);
     background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
-    /*box-shadow: 0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);*/
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);
     transition: all 0.5s ease;
 }
 .logo1 {
-    background-image: url('./r1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 350px;
+   background-image: url('./coin2.png');
+height: 350px;
+background-color: #151515;
+background-position-x: 50%;
 }
 .logo2 {
-    background-image: url('./r2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 350px;
+    background-image: url('./coin1.png');
+height: 350px;
+background-color: #151515;
+background-position-x: 50%;
 }
-.card:hover {
-    
-    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);
-}
+
 .card-body{
   padding: 0;
 }
 .card-header {
     border: 0px;
     color: black;
-   background-image: url('./tail.jpeg');
-background-size: cover;
+  color: #f9f9f9;
+background: #3e4451;
+font-weight: 900;
   }
   .card-footer {
     border: 0px;
+      background-color: #3e4451;
 }
 .btn.btn-success {
-    background-color: rgb(64,78,92);
+    background: linear-gradient(40deg,#ff6ec4,#7873f5) !important;
     border: 0;
     border-radius: 2px;
     padding: 8px 15px;
     font-size: 15px;
     box-shadow: 2px 2px 4px #131313;
+}
+/*oooo*/
+.type{
+  font-family: 'VT323', monospace;
+font-size: 29px;
+}
+
+  .foot {
+    position: fixed;
+    bottom: 0px;
+    background: #0000007d;
+    width: 100%;
+    padding: 10px;
+    left: 0;
+    margin: 0 auto;
+display: flex;
+}
+.fa{
+  margin-right: 10px;
 }
