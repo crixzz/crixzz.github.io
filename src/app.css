@@ -200,3 +200,6 @@ display: flex;
   }
 }
 
+.token_page{
+    padding:0;
+    background-image: url('./token.jpg');}
