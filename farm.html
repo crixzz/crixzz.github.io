@@ -1,14 +1,31 @@
+
+
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" type="text/css" href="./src/app.css">
-<style>
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="./src/app.css">
+      <style type="text/css">
+         .modal-content {
+         background: #1c1c1c;
+         color: white;
+         }
+         .modal-footer{
+         border: 0;
+         }
+         .modal-header{
+         border: 0;
+         }
+         input {
+    width: 100%;
+    border: 0px;
+    padding: 5px;
+    background: #fdfdfd;
+}
   .logo1 {
 
     background-color: #000;
@@ -17,76 +34,120 @@
 
     background-color: #000;
 }
-    </style>
-</head>
-<body>
-    <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-8"><a href ="https://crixzz.github.io"><div class="fofo" style="height: 70px;background-size: contain;width: 70px;margin-bottom: 10px;-webkit-filter: invert(90%);filter: invert(90%);"></div></a>
-        </div>
-        <div class="col-md-4 mx-auto my-auto">
-             
-            <button style="background: linear-gradient(40deg,#ffd86f,#fc6262) !important;display: inline-block;width: 50%;" type="button" class="btn btn-success btn-block btn-sm">
-                Unlock Wallet
-            </button>
-          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-   Account
-  </button><div class="collapse" id="collapseExample">
-            <h6 style="background: #171717;
-padding: 20px;">
-                Your Balance : <span id="bal_in"></span><br><br>Total Staked : 
-          </h6></div>
-        </div>
-    </div>
-    <br>
-    <div class="row">
-      <div class="col-md-1"></div>
-        <div class="col-md-4">
-            <div class="card">
-                <h6 class="card-header">
-                    $DIE
-                </h6>
-                <div class="card-body">
-                    <div class="logo1"></div>
-                </div>
-                <div class="card-footer">
-                    <span id="apy_in" >APY:</span>
-                    <br>
-                    Your Staked Value : <span id="stake_in"></span>
-                </div>
-            </div> 
-            <br>
-          <button style="width:20%;margin-bottom:12px" type="button" class="btn btn-success ">
+      </style>
+   </head>
+   <body>
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-md-8">
+               <a href ="https://crixzz.github.io"><div class="fofo" style="height: 70px;background-size: contain;width: 70px;margin-bottom: 10px;-webkit-filter: invert(90%);filter: invert(90%);"></div></a>
+            </div>
+            <div class="col-md-4 mx-auto my-auto">
+               <button style="background: linear-gradient(40deg,#ffd86f,#fc6262) !important;display: inline-block;width: 50%;" type="button" class="btn btn-success btn-block btn-sm">
+               Unlock Wallet
+               </button>
+               <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+               Account
+               </button>
+               <div class="collapse" id="collapseExample">
+                  <h6 style="background: #171717;
+                     padding: 20px;">
+                     Your Stake : <span id="bal_in"></span><br><br>Total Staked : 
+                  </h6>
+               </div>
+            </div>
+         </div>
+         <br>
+         <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+               <div class="card">
+                  <h6 class="card-header">
+                     $DIE
+                  </h6>
+                  <div class="card-body">
+                     <div class="logo1"></div>
+                  </div>
+                  <div class="card-footer">
+                     <span id="apy_in" >APY:</span>
+                     <br>
+                     Your Staked Value : <span id="stake_in"></span>
+                  </div>
+               </div>
+               <br>
+               <button style="width:20%;margin-bottom:12px" type="button" class="btn btn-success " data-toggle="modal" data-target="#unstake_modal">
                Exit
-            </button>
-            <button style="width:20%;margin-bottom:12px" type="button" class="btn btn-success">
-                Play
-            </button>
-          
-        </div> <div class="col-md-2"></div>
-        <div class="col-md-4">
-            <div class="card">
-                <h6 class="card-header">
-                    $RETRY
-                </h6>
-                <div class="card-body">
-                    <div class="logo2"></div>
-                </div>
-                <div class="card-footer">
-                    Earned:<span id="earn_in"></span><br>
-                    <br>
-                </div>
-            </div> 
-            <br>
-            <button style="width:22%;" type="button" class="btn btn-success btn-block btn-sm">
-                Restart
-            </button>
-        </div><div class="col-md-1"></div>
-    </div>
-</div>
-<script type="text/javascript" src="./src/app.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
-</body>
+               </button>
+               <div class="modal fade" id="unstake_modal">
+                  <div class="modal-dialog modal-dialog-centered">
+                     <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                           <h4 class="modal-title">Unstake</h4>
+                           <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                           <input type="text">
+                        </div>
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                           <button type="button" class="btn btn-secondary" >Unstake</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <button style="width:20%;margin-bottom:12px" type="button" class="btn btn-success" data-toggle="modal" data-target="#stake_modal">
+               Play
+               </button>
+                   <div class="modal fade" id="stake_modal">
+                  <div class="modal-dialog modal-dialog-centered">
+                     <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                           <h4 class="modal-title">Stake</h4>
+                           <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                           <input type="text">
+                        </div>
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                           <button type="button" class="btn btn-secondary" >Stake</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+               <div class="card">
+                  <h6 class="card-header">
+                     $RETRY
+                  </h6>
+                  <div class="card-body">
+                     <div class="logo2"></div>
+                  </div>
+                  <div class="card-footer">
+                     Earned:<span id="earn_in"></span><br>
+                     <br>
+                  </div>
+               </div>
+               <br>
+               <button style="width:22%;" type="button" class="btn btn-success btn-block btn-sm">
+               Restart
+               </button>
+            </div>
+            <div class="col-md-1"></div>
+         </div>
+      </div>
+      <script type="text/javascript" src="./src/app.js"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+   </body>
 </html>
+
